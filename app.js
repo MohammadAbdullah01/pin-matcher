@@ -21,3 +21,21 @@ document.getElementById("generate-pin").addEventListener("click", function () {
 
 })
 
+// calc part 
+document.getElementById("calc-body").addEventListener("click", function (event) {
+    // calc output 
+    let calcOutPut = document.getElementById("calc-output");
+
+
+    if (isNaN(event.target.innerText)) {
+        if (event.target.innerText == "C") {
+            calcOutPut.value = "";
+        }
+    }
+    else {
+        let numbers = event.target.innerText;
+        numbers = calcOutPut.value + numbers;
+        calcOutPut.value = numbers;
+    }
+})
+

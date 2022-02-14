@@ -61,3 +61,7 @@ document.getElementById("submit-btn").addEventListener("click", function () {
         errorMom.removeChild(success)
     }
 })
+
+var name = "salman";
+console.log(name)
+

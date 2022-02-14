@@ -38,4 +38,26 @@ document.getElementById("calc-body").addEventListener("click", function (event) 
         calcOutPut.value = numbers;
     }
 })
+let errorMom = document.getElementById("error-mom");
+let success = document.getElementById("success");
+let fail = document.getElementById("fail");
+errorMom.removeChild(success);
+errorMom.removeChild(fail)
 
+// event on submit button ... match the generator pic and input and show the message below
+document.getElementById("submit-btn").addEventListener("click", function () {
+    let pin = document.getElementById("pin-field").value;
+    let myInput = document.getElementById("calc-output").value;
+    // let errorMom = document.getElementById("error-mom");
+    // let success = document.getElementById("success");
+    // let fail = document.getElementById("success");
+    // errorMom.removeChild(success);
+    if (pin == myInput) {
+        errorMom.appendChild(success);
+        errorMom.removeChild(fail);
+    }
+    else {
+        errorMom.appendChild(fail);
+        errorMom.removeChild(success)
+    }
+})
